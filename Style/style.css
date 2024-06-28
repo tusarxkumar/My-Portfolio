@@ -132,6 +132,7 @@ span {
 
 .home-content p {
     font-size: 1.6rem;
+    /* text-align: justify; */
     text-align: justify;
     text-justify: inter-word;
     letter-spacing: .4px;
@@ -336,6 +337,7 @@ span {
     font-size: 2rem;
     color: var(--snd-bg-color);
 }
+
 /************ CONTACT SECTION  ************/
 .contact h2 {
     margin-bottom: 3rem;
@@ -492,6 +494,10 @@ span {
         width: 60vw;
     }
 
+    .home-content p {
+        text-align: justify;
+    }
+
     .about-content h2,
     h3 {
         font-size: 3.5rem;
@@ -529,8 +535,24 @@ span {
         width: 70vw;
     }
 
+    .home-content p {
+        text-align: justify;
+    }
+
     .about-content h2 {
-        font-size: 2rem;
+        font-size: 3rem;
+    }
+
+    .about-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .about-content p {
+        /* text-align: center; */
+        text-align: justify;
+        line-height: 1.6;
+        hyphens: auto;
+        text-align-last: left;
     }
 
     .about-img img {
