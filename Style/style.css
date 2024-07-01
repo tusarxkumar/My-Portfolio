@@ -11,6 +11,14 @@
     scroll-behavior: smooth;
 }
 
+#preloader{
+    background: #000 url(/images/Loading_1.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
 :root {
     --bg-color: #0b0b0b;
     /* Black */
