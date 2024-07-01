@@ -73,5 +73,5 @@ form.addEventListener('submit', e => {
     window.addEventListener("load", function () {
         setTimeout(function () {
             loader.style.display = "none";
-        }, 2000); // 2000 milliseconds = 2 seconds delay
+        }, 1000); 
     });
