@@ -36,40 +36,42 @@ ScrollReveal({
     distance: '80px',
     duration: 2000,
     delay: 200,
-    });
-    ScrollReveal().reveal('.home-content, heading', { origin: 'top' });
-    ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form' , { origin: 'buttom' });
-    ScrollReveal().reveal('.home-contact h1, .about-img', { origin: 'left' });
-    ScrollReveal().reveal('.home-contact p, .about-content', { origin: 'right' });
+});
+ScrollReveal().reveal('.home-content, heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'buttom' });
+ScrollReveal().reveal('.home-contact h1, .about-img', { origin: 'left' });
+ScrollReveal().reveal('.home-contact p, .about-content', { origin: 'right' });
 
-    // typed js 
-    const typed = new Typed('.multiple-text', {
+// typed js 
+const typed = new Typed('.multiple-text', {
     strings: ['Frontend Developer', '4th Year Student'],
     typeSpeed: 70,
     backSpeed: 70,
     backDelay: 1000,
     loop: true,
-    });
+});
 
-    
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZjSaGU97TV6LeDrHVA2Hjqwx6i2GI1bHNJPH3VQySw7WfFih4LCijdktJLKUg-5eJNg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-    })
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxZjSaGU97TV6LeDrHVA2Hjqwx6i2GI1bHNJPH3VQySw7WfFih4LCijdktJLKUg-5eJNg/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function () {
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+})
 
     var loader = document.getElementById("preloader");
-    window.addEventListener("load",function(){
-        loader.style.display = "none";
-    })
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            loader.style.display = "none";
+        }, 2000); // 2000 milliseconds = 2 seconds delay
+    });
