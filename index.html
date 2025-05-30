@@ -205,7 +205,8 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form name="submit-to-google-sheet">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="aadc8ebe-9c83-437b-83bc-7361edf7e01a">
             <div class="input-box">
                 <input type="text" name="Name" placeholder="Full Name" required>
                 <input type="email" name="Email" placeholder="Email Address" required>
@@ -220,9 +221,7 @@
             <br>
             <br>
             <br>
-            <h2>Sorry, unfortunately this contact me is not working. If you want to reach me feel free to dm me on LinkedIn provided above.
-                Thank you!
-            </h2>
+            
         </form>
         <span id="msg"></span>
     </section>
