@@ -44,7 +44,7 @@ ScrollReveal().reveal('.home-contact p, .about-content', { origin: 'right' });
 
 // typed js 
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', '4th Year Student'],
+    strings: ['Frontend Developer', 'CSIT Graduate open to work'],
     typeSpeed: 70,
     backSpeed: 70,
     backDelay: 1000,
